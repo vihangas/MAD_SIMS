@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">MAD_SIMS</string>
+
+    <string-array name="subs">
+        <item>SE</item>
+        <item>DBMS</item>
+        <item>OOP</item>
+        <item>PS</item>
+    </string-array>
+    <string-array name="types">
+        <item>Lab</item>
+        <item>Lecture</item>
+        <item>Practical</item>
+    </string-array>
 </resources>
