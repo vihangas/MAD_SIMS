@@ -1,10 +1,12 @@
-package com.example.deshan.mad_sims;
+package com.example.deshan.mad_sims.Attendance;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
+
+import com.example.deshan.mad_sims.R;
 
 public class desPercentage extends AppCompatActivity {
 

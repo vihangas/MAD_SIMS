@@ -1,4 +1,4 @@
-package com.example.deshan.mad_sims;
+package com.example.deshan.mad_sims.Attendance;
 
 import android.app.DatePickerDialog;
 import android.app.Dialog;
@@ -12,9 +12,11 @@ import android.widget.DatePicker;
 import android.widget.Spinner;
 import android.widget.TextView;
 
+import com.example.deshan.mad_sims.R;
+
 import java.util.Calendar;
 
-public class desUpdate extends AppCompatActivity {
+public class desDisplay extends AppCompatActivity {
 
     Button btn;
     int year,month,date;
@@ -24,7 +26,7 @@ public class desUpdate extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_des_update);
+        setContentView(R.layout.activity_des_display);
 
         final Calendar cal = Calendar.getInstance();
         year = cal.get(Calendar.YEAR);
@@ -33,24 +35,19 @@ public class desUpdate extends AppCompatActivity {
 
         showDialogOnButtonClick();
 
-        Spinner subjects2 = (Spinner)findViewById(R.id.spinner7);
+        Spinner subjects2 = (Spinner)findViewById(R.id.spinner3);
 
-        ArrayAdapter<String> myAdapter2 = new ArrayAdapter<String>(desUpdate.this,android.R.layout.simple_list_item_1,getResources().getStringArray(R.array.subs));
+        ArrayAdapter<String> myAdapter2 = new ArrayAdapter<String>(desDisplay.this,android.R.layout.simple_list_item_1,getResources().getStringArray(R.array.subs));
 
         myAdapter2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         subjects2.setAdapter(myAdapter2);
-
-        Spinner classTypes = (Spinner)findViewById(R.id.spinner4);
-        ArrayAdapter<String> myAdapter1 = new ArrayAdapter<String>(desUpdate.this,android.R.layout.simple_list_item_1,getResources().getStringArray(R.array.types));
-        myAdapter2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        classTypes.setAdapter(myAdapter1);
 
         getSupportActionBar().setDisplayShowHomeEnabled(true);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 
     public void showDialogOnButtonClick(){
-        btn = (Button)findViewById(R.id.button12);
+        btn = (Button)findViewById(R.id.button7);
 
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -74,7 +71,7 @@ public class desUpdate extends AppCompatActivity {
             month = i1;
             date = i2;
 
-            txt = (TextView)findViewById(R.id.textView18);
+            txt = (TextView)findViewById(R.id.textView15);
             txt.setText(year+"/"+month+"/"+date);
         }
     };

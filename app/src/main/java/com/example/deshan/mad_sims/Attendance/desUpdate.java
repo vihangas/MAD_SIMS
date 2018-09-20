@@ -1,4 +1,4 @@
-package com.example.deshan.mad_sims;
+package com.example.deshan.mad_sims.Attendance;
 
 import android.app.DatePickerDialog;
 import android.app.Dialog;
@@ -7,11 +7,16 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ArrayAdapter;
-import android.widget.*;
+import android.widget.Button;
+import android.widget.DatePicker;
+import android.widget.Spinner;
+import android.widget.TextView;
+
+import com.example.deshan.mad_sims.R;
 
 import java.util.Calendar;
 
-public class desEnter_Attendance extends AppCompatActivity {
+public class desUpdate extends AppCompatActivity {
 
     Button btn;
     int year,month,date;
@@ -21,7 +26,7 @@ public class desEnter_Attendance extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_des_enter__attendance);
+        setContentView(R.layout.activity_des_update);
 
         final Calendar cal = Calendar.getInstance();
         year = cal.get(Calendar.YEAR);
@@ -30,26 +35,24 @@ public class desEnter_Attendance extends AppCompatActivity {
 
         showDialogOnButtonClick();
 
+        Spinner subjects2 = (Spinner)findViewById(R.id.spinner7);
 
+        ArrayAdapter<String> myAdapter2 = new ArrayAdapter<String>(desUpdate.this,android.R.layout.simple_list_item_1,getResources().getStringArray(R.array.subs));
 
-        Spinner subjects = (Spinner)findViewById(R.id.spinner);
-
-        ArrayAdapter<String> myAdapter = new ArrayAdapter<String>(desEnter_Attendance.this,android.R.layout.simple_list_item_1,getResources().getStringArray(R.array.subs));
-
-        myAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        subjects.setAdapter(myAdapter);
-
-        Spinner classTypes = (Spinner)findViewById(R.id.spinner5);
-        ArrayAdapter<String> myAdapter2 = new ArrayAdapter<String>(desEnter_Attendance.this,android.R.layout.simple_list_item_1,getResources().getStringArray(R.array.types));
         myAdapter2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        classTypes.setAdapter(myAdapter2);
+        subjects2.setAdapter(myAdapter2);
+
+        Spinner classTypes = (Spinner)findViewById(R.id.spinner4);
+        ArrayAdapter<String> myAdapter1 = new ArrayAdapter<String>(desUpdate.this,android.R.layout.simple_list_item_1,getResources().getStringArray(R.array.types));
+        myAdapter2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        classTypes.setAdapter(myAdapter1);
 
         getSupportActionBar().setDisplayShowHomeEnabled(true);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 
     public void showDialogOnButtonClick(){
-        btn = (Button)findViewById(R.id.button2);
+        btn = (Button)findViewById(R.id.button12);
 
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -73,12 +76,10 @@ public class desEnter_Attendance extends AppCompatActivity {
             month = i1;
             date = i2;
 
-            txt = (TextView)findViewById(R.id.textView7);
+            txt = (TextView)findViewById(R.id.textView18);
             txt.setText(year+"/"+month+"/"+date);
         }
     };
-
-
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {

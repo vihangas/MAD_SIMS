@@ -1,4 +1,4 @@
-package com.example.deshan.mad_sims;
+package com.example.deshan.mad_sims.Attendance;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -8,11 +8,14 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
 
+import com.example.deshan.mad_sims.R;
+
 public class desMainActivity extends AppCompatActivity {
 
     private static Button button_enterAtt;
     private static Button button_view;
     private static Button button_update;
+    DatabaseHelper mydb;
 
 
     @Override
@@ -23,6 +26,7 @@ public class desMainActivity extends AppCompatActivity {
         onClickButtonListenerView();
         onClickButtonListenerUpdate();
         onClickButtonListenerPercentage();
+
 
         Spinner subjects = (Spinner)findViewById(R.id.spinner2);
 

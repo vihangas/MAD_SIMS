@@ -9,35 +9,35 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".desMainActivity">
+        <activity android:name=".Attendance.desMainActivity">
             <intent-filter>
                 <action android:name=".desMainActivity" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:name=".desEnter_Attendance">
+        <activity android:name=".Attendance.desEnter_Attendance">
             <intent-filter>
                 <action android:name=".desEnter_Attendance" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:name=".desDisplay">
+        <activity android:name=".Attendance.desDisplay">
             <intent-filter>
                 <action android:name=".desDisplay" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:name=".desPercentage">
+        <activity android:name=".Attendance.desPercentage">
             <intent-filter>
                 <action android:name=".desPercentage" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:name=".desUpdate">
+        <activity android:name=".Attendance.desUpdate">
             <intent-filter>
                 <action android:name=".desUpdate" />
 
