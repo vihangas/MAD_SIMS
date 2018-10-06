@@ -12,4 +12,33 @@
         <item>Lecture</item>
         <item>Practical</item>
     </string-array>
+    <string-array name="semester_id">
+        <item>Sem001</item>
+        <item>Sem002</item>
+        <item>Sem003</item>
+        <item>Sem004</item>
+        <item>Sem005</item>
+        <item>Sem006</item>
+        <item>Sem007</item>
+        <item>Sem008</item>
+    </string-array>
+    <string-array name="exam_id">
+        <item>Final</item>
+        <item>Mid</item>
+        <item>Ass001</item>
+        <item>Ass002</item>
+        <item>Ass003</item>
+        <item>Ass004</item>
+        <item>Ass005</item>
+    </string-array>
+    <string-array name="subject_id">
+        <item>SE</item>
+        <item>OOP</item>
+        <item>DBMS</item>
+        <item>PS</item>
+    </string-array>
+    <string-array name="attendance">
+        <item>Yes</item>
+        <item>No</item>
+    </string-array>
 </resources>

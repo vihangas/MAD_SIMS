@@ -51,6 +51,45 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".Marks.MainMarksActivity"
+            android:parentActivityName=".MAD_MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MAD_MainActivity"/>
+        </activity>
+
+        <activity
+            android:name=".Marks.AddMarksActivity"
+            android:parentActivityName=".Marks.MainMarksActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Marks.MainMarksActivity"/>
+        </activity>
+
+        <activity
+            android:name=".Marks.DeleteMarksActivity"
+            android:parentActivityName=".Marks.MainMarksActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Marks.MainMarksActivity"/>
+        </activity>
+
+        <activity
+            android:name=".Marks.UpdateMarksActivity"
+            android:parentActivityName=".Marks.MainMarksActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Marks.MainMarksActivity"/>
+        </activity>
+
+        <activity
+            android:name=".Marks.ViewMarksActivity"
+            android:parentActivityName=".Marks.MainMarksActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Marks.MainMarksActivity"/>
+        </activity>
     </application>
 
 </manifest>
